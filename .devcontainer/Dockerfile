@@ -68,6 +68,12 @@ RUN apt-get update \
     # Clean up
     && apt-get autoremove -y && apt-get clean -y && rm -rf /var/lib/apt/lists/* /tmp/library-scripts/
 
+# Upgrade pip.
+RUN python -m pip install --upgrade pip 
+
+# Install ipykernel.
+RUN pip install -U ipykernel
+
 # Install nbconvert.
 RUN git clone https://github.com/jupyter/nbconvert.git && \
     pip install -e ./nbconvert && \
