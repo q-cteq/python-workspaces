@@ -68,6 +68,11 @@ RUN apt-get update \
     # Clean up
     && apt-get autoremove -y && apt-get clean -y && rm -rf /var/lib/apt/lists/* /tmp/library-scripts/
 
+# Install nbconvert.
+RUN git clone https://github.com/jupyter/nbconvert.git && \
+    pip install -e ./nbconvert && \
+    pip install nbconvert[test]
+
 # Setting the ENTRYPOINT to docker-init.sh will configure non-root access 
 # to the Docker socket. The script will also execute CMD as needed.
 ENTRYPOINT [ "/usr/local/share/docker-init.sh" ]

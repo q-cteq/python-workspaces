@@ -45,7 +45,14 @@
 		"redhat.vscode-yaml",
 		"ms-dotnettools.dotnet-interactive-vscode",
 		"fudge.auto-using",
-		"visualstudioexptteam.vscodeintellicode"
+		"visualstudioexptteam.vscodeintellicode",
+		"donjayamanne.python-extension-pack",
+		"kevinrose.vsc-python-indent",
+		"mgesbert.python-path",
+		"littlefoxteam.vscode-python-test-adapter",
+		"njqdev.vscode-python-typehint",
+		"ms-python.gather",
+		"leojhonsong.python-extension-pack"
 	],
 	
 	"shutdownAction": "none",
@@ -54,7 +61,7 @@
 	// "forwardPorts": [],
 
 	// Use 'postCreateCommand' to run commands after the container is created.
-	"postCreateCommand": "docker system prune -f && docker image prune -f",
+	"postCreateCommand": "docker system prune -f && docker image prune -f && python -m pip install --upgrade pip && pip install -U ipykernel",
 
 	// Comment out connect as root instead. More info: https://aka.ms/vscode-remote/containers/non-root.
 	// "remoteUser": "vscode"
