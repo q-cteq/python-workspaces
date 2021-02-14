@@ -21,7 +21,7 @@ services:
 
     volumes:
       - /var/run/docker.sock:/var/run/docker-host.sock
-      - .:/workspace/python:cached
+      - .:/workspaces/python:cached
       
     entrypoint: /usr/local/share/docker-init.sh
     command: sleep infinity 
