@@ -2,14 +2,14 @@ version: "3"
 
 services: 
 
-  python:
+  workspaces:
     build:
       context: .
       dockerfile: Dockerfile
       args:
         USER_UID: 1000
         USER_GID: 1000
-        VARIANT: 3
+        VARIANT: 3.7
         INSTALL_NODE: "true"
         NODE_VERSION: "lts/*"
     image: qtc.qcteq.io/development/python:1.0.0

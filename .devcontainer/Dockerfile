@@ -50,6 +50,10 @@ RUN if [ "${INSTALL_AZURE_BICEP}" = "true" ]; then curl -Lo bicep https://github
     sudo mv ./bicep /usr/local/bin/bicep && \
     bicep --help; fi
 
+# Install sndfile-tools
+RUN sudo apt-get update && \
+    sudo apt-get install -y sndfile-tools
+
 # Install needed packages and setup non-root user. Use a separate RUN statement to add your
 # own dependencies. A user of "automatic" attempts to reuse an user ID if one already exists.
 ARG USERNAME=automatic
@@ -69,7 +73,7 @@ RUN apt-get update \
     && apt-get autoremove -y && apt-get clean -y && rm -rf /var/lib/apt/lists/* /tmp/library-scripts/
 
 # Upgrade pip.
-RUN python -m pip install --upgrade pip 
+RUN python3 -m pip install --upgrade pip 
 
 # Install ipykernel.
 RUN pip install -U ipykernel

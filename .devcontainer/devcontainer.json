@@ -1,11 +1,11 @@
 // For format details, see https://aka.ms/devcontainer.json. For config options, see the README at:
 // https://github.com/microsoft/vscode-dev-containers/tree/v0.158.0/containers/python-3
 {
-	"name": "Python 3",
+	"name": "Python 3.7",
 	"dockerComposeFile": [
 		"docker-compose.yml"
 	],
-	"service": "python",
+	"service": "workspaces",
 	"workspaceFolder": "..",
 
 	// Set *default* container specific settings.json values on container create.
