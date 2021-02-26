@@ -50,9 +50,13 @@ RUN if [ "${INSTALL_AZURE_BICEP}" = "true" ]; then curl -Lo bicep https://github
     sudo mv ./bicep /usr/local/bin/bicep && \
     bicep --help; fi
 
-# Install sndfile-tools
+# Install sndfile-tools to process .wav files
 RUN sudo apt-get update && \
     sudo apt-get install -y sndfile-tools
+
+# Install ffmpeg libsm6 libxext6 to use OpenCV libraries
+RUN sudo apt-get update && \
+    sudo apt-get install -y ffmpeg libsm6 libxext6
 
 # Install needed packages and setup non-root user. Use a separate RUN statement to add your
 # own dependencies. A user of "automatic" attempts to reuse an user ID if one already exists.

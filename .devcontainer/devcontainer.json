@@ -43,7 +43,6 @@
 		"ms-azuretools.vscode-bicep",
 		"wraith13.bracket-lens",
 		"redhat.vscode-yaml",
-		"ms-dotnettools.dotnet-interactive-vscode",
 		"visualstudioexptteam.vscodeintellicode",
 		"donjayamanne.python-extension-pack",
 		"kevinrose.vsc-python-indent",
@@ -51,7 +50,8 @@
 		"littlefoxteam.vscode-python-test-adapter",
 		"njqdev.vscode-python-typehint",
 		"ms-python.gather",
-		"leojhonsong.python-extension-pack"
+		"leojhonsong.python-extension-pack",
+		"ms-toolsai.jupyter"
 	],
 	
 	"shutdownAction": "none",
